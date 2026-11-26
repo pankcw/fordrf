@@ -5,15 +5,15 @@
 const lyricsData = [
   {
     "start": 22.16,
-    "text": "Ah, ah",
+    "text": "aa, aaa",
     "words": [
       {
-        "text": "Ah,",
+        "text": "aaa,",
         "start": 22.166,
         "end": 25.379
       },
       {
-        "text": "ah",
+        "text": "aaaa",
         "start": 25.379,
         "end": 28.577
       }
@@ -21,10 +21,10 @@ const lyricsData = [
   },
   {
     "start": 29.2,
-    "text": "Ah-ah-ah",
+    "text": "aa-aa-aa",
     "words": [
       {
-        "text": "Ah-ah-ah",
+        "text": "aa-aa-aa",
         "start": 29.204,
         "end": 32.615
       }
@@ -32,15 +32,15 @@ const lyricsData = [
   },
   {
     "start": 34.96,
-    "text": "Ah, ah",
+    "text": "aa, aa",
     "words": [
       {
-        "text": "Ah,",
+        "text": "aa,",
         "start": 34.962,
         "end": 38.161
       },
       {
-        "text": "ah",
+        "text": "aaa",
         "start": 38.161,
         "end": 41.356
       }
@@ -48,10 +48,10 @@ const lyricsData = [
   },
   {
     "start": 41.94,
-    "text": "Ah-ah-ah",
+    "text": "aaa-aa-aa",
     "words": [
       {
-        "text": "Ah-ah-ah",
+        "text": "aa-aa-aa",
         "start": 41.94,
         "end": 44.535
       }
@@ -361,10 +361,10 @@ const lyricsData = [
   },
   {
     "start": 121.98,
-    "text": "Ah-ah-ah",
+    "text": "aa-aa-aa",
     "words": [
       {
-        "text": "Ah-ah-ah",
+        "text": "aa-aa-aa",
         "start": 121.985,
         "end": 124.665
       }
