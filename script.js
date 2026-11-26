@@ -46,7 +46,7 @@
     return out.sort((a, b) => a.start - b.start);
   }
 
-  const lines = parseLyrics(window.LYRICS_RAW);
+  const lines = window.lyricsData || [];
   const panel = $('lyrics');
 
   /* ---------- Render lirik ---------- */
