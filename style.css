@@ -1,0 +1,73 @@
+/* Palet solid, tanpa gradient */
+:root{
+  --bg:#faf7f0; --card:#fffdf8; --ink:#2b2d31; --dim:#9aa3ad;
+  --blue:#a9c7e4; --blue-d:#4f7ba6; --line:#e6e1d5;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:400 16px/1.75 Inter,system-ui,sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;font-weight:600;margin:0;line-height:1.2}
+.screen{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;padding:48px 20px}
+[hidden]{display:none!important}
+
+/* Pembuka */
+.intro{justify-content:center;text-align:center;gap:14px}
+.intro h1{font-size:clamp(2.4rem,9vw,3.6rem)}
+.intro p{margin:0 0 14px;color:#555b63;max-width:28ch}
+.moon{width:72px;height:58px;fill:none;stroke:var(--blue-d);stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;margin-bottom:8px}
+
+/* Tombol */
+.btn{font:500 1rem Inter,sans-serif;background:var(--blue);color:#1f2d3d;border:1px solid var(--blue);border-radius:999px;padding:12px 28px;cursor:pointer;transition:background .2s}
+.btn:hover:not(:disabled){background:#97bbe0}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+.btn.ghost{background:transparent;color:var(--blue-d);border-color:var(--blue);padding:8px 18px;font-size:.9rem}
+.btn.round{width:52px;height:52px;padding:0;display:grid;place-items:center;flex:none}
+.btn svg{width:22px;height:22px;fill:#1f2d3d}
+:focus-visible{outline:2px solid var(--blue-d);outline-offset:3px}
+
+/* Halaman utama */
+.main{gap:40px;max-width:620px;margin:0 auto;opacity:0;transform:translateY(8px);transition:opacity .9s ease,transform .9s ease}
+.main.show{opacity:1;transform:none}
+.main header{text-align:center}
+.main h2{font-size:clamp(2rem,7vw,2.8rem);color:var(--blue-d)}
+.message{width:100%}
+.message p{margin:0 0 1.1em}
+
+/* Foto */
+.photos{display:flex;flex-wrap:wrap;gap:16px;justify-content:center;width:100%}
+.photo{margin:0;width:calc(50% - 8px);background:var(--card);border:1px solid var(--line);padding:8px 8px 12px;border-radius:6px}
+.photo:first-child{width:100%}
+.photo img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+.photo .ph{display:none;aspect-ratio:4/3;place-items:center;text-align:center;font-size:.8rem;color:var(--dim);border:1px dashed var(--blue);border-radius:3px;padding:8px}
+.photo.missing img{display:none}
+.photo.missing .ph{display:grid}
+.photo figcaption{font-size:.85rem;color:#555b63;text-align:center;margin-top:8px}
+
+/* Pemutar */
+.player{width:100%;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:22px 18px;display:flex;flex-direction:column;gap:14px;align-items:stretch}
+.player h3{font-size:1.5rem}
+.player h3 span{font:400 .85rem Inter,sans-serif;color:var(--dim);margin-left:6px}
+.note{margin:0;font-size:.88rem;color:#6b5b3a;background:#f4efe0;border-radius:6px;padding:10px 12px}
+.controls{display:flex;align-items:center;gap:14px}
+.bar{flex:1;min-width:0}
+input[type=range]{width:100%;accent-color:var(--blue-d);height:24px;margin:0}
+.times{display:flex;justify-content:space-between;font-size:.8rem;color:#6b7280}
+#lyricToggle{align-self:flex-start}
+
+/* Lirik */
+.lyrics{position:relative;height:min(46vh,320px);overflow-y:auto;text-align:center;padding:40% 8px;scroll-behavior:auto;border-top:1px solid var(--line)}
+.lyrics .empty{color:var(--dim);font-size:.9rem;padding:0}
+.line{font-size:1.1rem;line-height:1.6;color:var(--dim);margin:0 0 .9em;transition:color .3s}
+.line.active{color:var(--ink);font-weight:500}
+.line.active .w.done{color:var(--blue-d)}
+.line.active .w.on{background:var(--blue);border-radius:4px;color:#1f2d3d}
+.w{padding:0 1px}
+
+/* Penutup */
+.closing{text-align:center;font-family:"Cormorant Garamond",Georgia,serif;font-size:1.45rem;line-height:1.5;padding:12px 0 24px}
+.closing p{margin:0}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;animation:none!important;scroll-behavior:auto!important}
+  .main{transform:none}
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Good Night, Sayang</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Halaman pembuka -->
+  <section id="intro" class="screen intro">
+    <svg class="moon" viewBox="0 0 80 64" aria-hidden="true">
+      <path d="M44 8a26 26 0 1 0 20 38A21 21 0 0 1 44 8z"/>
+      <path d="M62 10v6M59 13h6M10 14v4M8 16h4"/>
+    </svg>
+    <h1>Good Night, Sayang.</h1>
+    <p>Sebelum tidur, ada sedikit sesuatu untuk kamu.</p>
+    <button id="openBtn" class="btn" type="button">Buka pesan</button>
+  </section>
+
+  <!-- Halaman utama -->
+  <main id="main" class="screen main" hidden>
+    <header>
+      <h2>Selamat malam, Sayang.</h2>
+    </header>
+
+    <section class="message">
+      <p>Hari ini pasti banyak yang sudah kamu lewati, dan aku tahu nggak semuanya mudah. Aku cuma mau bilang: kamu sudah melakukan yang terbaik, dan itu cukup.</p>
+      <p>Malam ini, taruh dulu semua yang bikin capek. Apa pun yang belum selesai bisa dipikirkan besok, dengan kepala yang lebih segar.</p>
+      <p>Istirahat yang cukup ya, Sayang. Semoga tidurmu nyenyak.</p>
+    </section>
+
+    <!-- Foto kenangan: ganti file di assets/photos/ dan teks keterangannya -->
+    <section class="photos" aria-label="Foto kenangan">
+      <figure class="photo">
+        <img src="assets/photos/foto-1.jpg" alt="Foto kenangan 1">
+        <div class="ph">Taruh foto di<br>assets/photos/foto-1.jpg</div>
+        <figcaption>Yang ini selalu bikin aku senyum.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="assets/photos/foto-2.jpg" alt="Foto kenangan 2">
+        <div class="ph">Taruh foto di<br>assets/photos/foto-2.jpg</div>
+        <figcaption>Lucu banget, jangan protes.</figcaption>
+      </figure>
+      <figure class="photo">
+        <img src="assets/photos/foto-3.jpg" alt="Foto kenangan 3">
+        <div class="ph">Taruh foto di<br>assets/photos/foto-3.jpg</div>
+        <figcaption>Kenangan kecil buat kamu simpan.</figcaption>
+      </figure>
+    </section>
+
+    <!-- Pemutar musik -->
+    <section class="player" aria-label="Pemutar musik">
+      <h3>Separuh Aku <span>NOAH</span></h3>
+      <audio id="audio" src="assets/music/separuh-aku.mp3" preload="metadata"></audio>
+      <p id="audioNote" class="note" hidden>File musik belum tersedia. Pemilik website perlu menambahkan <strong>separuh-aku.mp3</strong> ke folder <strong>assets/music/</strong>.</p>
+      <div class="controls">
+        <button id="playBtn" class="btn round" type="button" aria-label="Putar musik" disabled>
+          <svg id="icoPlay" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          <svg id="icoPause" viewBox="0 0 24 24" aria-hidden="true" hidden><path d="M7 5h4v14H7zM13 5h4v14h-4z"/></svg>
+        </button>
+        <div class="bar">
+          <input id="seek" type="range" min="0" max="100" step="0.1" value="0" aria-label="Posisi lagu" disabled>
+          <div class="times"><span id="cur">0:00</span><span id="dur">0:00</span></div>
+        </div>
+      </div>
+      <button id="lyricToggle" class="btn ghost" type="button" aria-expanded="true" aria-controls="lyrics">Sembunyikan lirik</button>
+      <div id="lyrics" class="lyrics" tabindex="0" aria-label="Lirik lagu"></div>
+    </section>
+
+    <footer class="closing">
+      <p>Selamat malam, Sayang. Semoga besok menjadi hari yang lebih baik. Jangan lupa istirahat, ya.</p>
+    </footer>
+  </main>
+
+  <script src="lyrics-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
